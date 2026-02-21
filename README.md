@@ -7,13 +7,14 @@ Database Integration: Persistent storage of chat logs and user data using a dedi
 
 Modular Design: Separated logic for database management, server operations, and client UI.
 
+<br>
 📂 Project Structure
 server.c: The backbone of the application; manages connections and routes messages.
 
 client.c: The GTK-based frontend that allows users to send and receive messages.
 
 chat_db.c / chat_db.h: The database abstraction layer for saving and retrieving chat history.
-
+<br>
 🛠️ Prerequisites
 Before building, ensure you have the following installed:
 
