@@ -1,11 +1,22 @@
-This is a custom-built, client-side chat application developed in C++. It connects to a centralized server using raw TCP sockets to enable real-time communication. The graphical user interface was built from scratch using the GTK3 library and styled with custom CSS.
+🚀 Features
+Centralized Server: Handles multiple client connections using TCP sockets.
 
-Key Features:
+GTK Interface: A clean, responsive user interface built with the GTK library.
 
-Multithreaded Architecture: Uses std::thread to separate the network receiving loop from the GTK main UI loop, ensuring the application never freezes while waiting for server data.
+Database Integration: Persistent storage of chat logs and user data using a dedicated database module.
 
-Custom Protocol Parsing: Interprets a custom text-based application protocol to handle system alerts (SERVER:), private whispers (PRIVATE:), and channel navigation.
+Modular Design: Separated logic for database management, server operations, and client UI.
 
-State Management: Caches private chat histories in memory using standard C++ containers (std::vector), allowing users to switch seamlessly between global channels and private direct messages.
+📂 Project Structure
+server.c: The backbone of the application; manages connections and routes messages.
 
-Dynamic UI: Features auto-scrolling, visual notification badges for unread background messages, and dynamically generated user-list menus.
+client.c: The GTK-based frontend that allows users to send and receive messages.
+
+chat_db.c / chat_db.h: The database abstraction layer for saving and retrieving chat history.
+
+🛠️ Prerequisites
+Before building, ensure you have the following installed:
+
+gcc (C compiler)
+
+GTK 3.0 or GTK 4.0 development headers
